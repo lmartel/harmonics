@@ -1,0 +1,22 @@
+<% content_for :body do %>
+  <%= form_for [refinery, :auditions, @audition] do |f| %>
+			<%= f.label "Name: "%>
+			<%= f.text_field :firstname %>
+			<%= f.text_field :lastname %><br />
+			<%= f.label "Email: "%>
+			<%= f.text_field :email %><br />
+			<%= f.label "Phone: "%>
+			<%= f.text_field :phone %><br />
+			<%= f.label "Dorm: "%>
+			<%= f.text_field :dorm %>
+			<%= f.text_field :room %><br />
+			<%= f.label "Year: "%>
+			<%= f.text_field :year %><br />
+			<%= f.label "Voice: "%>
+			<%= f.text_field :voice %><br />
+			<%= f.submit %>
+		<% end %>
+
+<% end %>
+
+<%= render '/refinery/content_page' %>

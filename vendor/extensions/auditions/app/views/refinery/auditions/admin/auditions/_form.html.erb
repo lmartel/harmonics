@@ -1,0 +1,71 @@
+<%= form_for [refinery, :auditions_admin, @audition] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @audition,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :firstname -%>
+    <%= f.text_field :firstname, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :lastname -%>
+    <%= f.text_field :lastname  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :timeslot -%>
+    <%= f.datetime_select :timeslot  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :dorm -%>
+    <%= f.text_field :dorm  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :voice -%>
+    <%= f.text_field :voice  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :room -%>
+    <%= f.text_field :room  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :phone -%>
+    <%= f.text_field :phone  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :year -%>
+    <%= f.text_field :year  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :emailed -%>
+    <%= f.check_box :emailed, :checked => @audition[:emailed]  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.auditions.admin.auditions.audition'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @audition.firstname) %>
+<% end -%>

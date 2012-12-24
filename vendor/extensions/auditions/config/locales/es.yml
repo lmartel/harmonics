@@ -1,0 +1,37 @@
+es:
+  refinery:
+    plugins:
+      auditions:
+        title: Auditions
+#        article: masculino/femenino
+    auditions:
+      admin:
+        auditions:
+          actions:
+            create_new: Crear nuevo audition
+            reorder: Reordenar auditions
+            reorder_done: Reordenación de auditions completada
+          records:
+            title: Auditions
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay auditions todavía. Pulsa en "Crear nuevo Audition" para crear tu primer audition.
+          audition:
+            view_live_html: Ver este audition como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este audition
+            delete: Borrar este audition para siempre
+      auditions:
+        show:
+          other: Otros auditions
+  activerecord:
+    attributes:
+      'refinery/auditions/audition':
+        firstname: Firstname
+        lastname: Lastname
+        timeslot: Timeslot
+        dorm: Dorm
+        voice: Voice
+        room: Room
+        email: Email
+        phone: Phone
+        year: Year
+        emailed: Emailed

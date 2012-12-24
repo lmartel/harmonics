@@ -1,0 +1,36 @@
+nb:
+  refinery:
+    plugins:
+      auditions:
+        title: Auditions
+    auditions:
+      admin:
+        auditions:
+          actions:
+            create_new: Lag en ny Audition
+            reorder: Endre rekkefølgen på Auditions
+            reorder_done: Ferdig å endre rekkefølgen Auditions
+          records:
+            title: Auditions
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Auditions enda. Klikk på "Lag en ny Audition" for å legge til din første audition.
+          audition:
+            view_live_html: Vis hvordan denne audition ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne audition
+            delete: Fjern denne audition permanent
+      auditions:
+        show:
+          other: Andre Auditions
+  activerecord:
+    attributes:
+      'refinery/auditions/audition':
+        firstname: Firstname
+        lastname: Lastname
+        timeslot: Timeslot
+        dorm: Dorm
+        voice: Voice
+        room: Room
+        email: Email
+        phone: Phone
+        year: Year
+        emailed: Emailed

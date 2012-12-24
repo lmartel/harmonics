@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="auditions">
+    <% @auditions.each do |audition| %>
+      <li>
+        <%= link_to audition.firstname, refinery.auditions_audition_path(audition) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,81 @@
+<% content_for :body_content_title do %>
+  <%= @audition.firstname %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Firstname</h1>
+    <p>
+      <%=raw @audition.firstname %>
+    </p>
+  </section>
+  <section>
+    <h1>Lastname</h1>
+    <p>
+      <%=raw @audition.lastname %>
+    </p>
+  </section>
+  <section>
+    <h1>Timeslot</h1>
+    <p>
+      <%=raw @audition.timeslot %>
+    </p>
+  </section>
+  <section>
+    <h1>Dorm</h1>
+    <p>
+      <%=raw @audition.dorm %>
+    </p>
+  </section>
+  <section>
+    <h1>Voice</h1>
+    <p>
+      <%=raw @audition.voice %>
+    </p>
+  </section>
+  <section>
+    <h1>Room</h1>
+    <p>
+      <%=raw @audition.room %>
+    </p>
+  </section>
+  <section>
+    <h1>Email</h1>
+    <p>
+      <%=raw @audition.email %>
+    </p>
+  </section>
+  <section>
+    <h1>Phone</h1>
+    <p>
+      <%=raw @audition.phone %>
+    </p>
+  </section>
+  <section>
+    <h1>Year</h1>
+    <p>
+      <%=raw @audition.year %>
+    </p>
+  </section>
+  <section>
+    <h1>Emailed</h1>
+    <p>
+      <%=raw @audition.emailed %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="auditions">
+      <% @auditions.each do |audition| %>
+        <li>
+          <%= link_to audition.firstname, refinery.auditions_audition_path(audition) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
