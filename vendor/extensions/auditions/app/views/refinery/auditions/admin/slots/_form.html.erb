@@ -1,0 +1,17 @@
+<%= form_for [refinery, :auditions_admin, @slot] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @slot,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :timeslot -%>
+    <%= f.datetime_select :timeslot  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.slots.admin.slots.slot'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') %>
+<% end -%>

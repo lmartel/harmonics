@@ -20,12 +20,18 @@ module Refinery
       end
 
       def signup
+        @availabilities = Slot.available_timeslots
         @audition = Audition.new
       end
 
       def create
-        Audition.create(params[:audition])
-        redirect_to refinery.auditions_auditions_path
+        @audition = Audition.new(params[:audition])
+        if @audition.save
+          message = "Thanks for signing up! You're all set, #{@audition.firstname}!"
+        else
+          message = "Oops, there was a problem saving your info."
+        end
+        redirect_to refinery.auditions_auditions_path, :notice => message
       end
 
     protected

@@ -1,10 +1,27 @@
 nl:
   refinery:
     plugins:
+      slots:
+        title: Slots
       auditions:
         title: Auditions
     auditions:
       admin:
+        slots:
+          actions:
+            create_new: Maak een nieuwe Slot
+            reorder: Wijzig de volgorde van de Slots
+            reorder_done: Klaar met het wijzingen van de volgorde van de Slots
+          records:
+            title: Slots
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Slots. Druk op 'Maak een nieuwe Slot' om
+              de eerste aan te maken.
+          slot:
+            view_live_html: Bekijk deze slot op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze slot
+            delete: Verwijder deze slot voor eeuwig
         auditions:
           actions:
             create_new: Maak een nieuwe Audition
@@ -13,17 +30,25 @@ nl:
           records:
             title: Auditions
             sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Auditions. Druk op 'Maak een nieuwe Audition' om de eerste aan te maken.
+            no_items_yet: Er zijn nog geen Auditions. Druk op 'Maak een nieuwe Audition'
+              om de eerste aan te maken.
           audition:
-            view_live_html: Bekijk deze audition op de website <br/><em>(opent een nieuw venster)</em>
+            view_live_html: Bekijk deze audition op de website <br/><em>(opent een
+              nieuw venster)</em>
             edit: Bewerk deze audition
             delete: Verwijder deze audition voor eeuwig
+      slots:
+        show:
+          other: Andere Slots
       auditions:
         show:
           other: Andere Auditions
   activerecord:
     attributes:
-      'refinery/auditions/audition':
+      refinery/auditions/slot:
+        timeslot: Timeslot
+        refinery_audition_id: Refinery Audition
+      refinery/auditions/audition:
         firstname: Firstname
         lastname: Lastname
         timeslot: Timeslot

@@ -1,10 +1,25 @@
 zh-CN:
   refinery:
     plugins:
+      slots:
+        title: Slots
       auditions:
         title: Auditions
     auditions:
       admin:
+        slots:
+          actions:
+            create_new: 建立新的 Slot
+            reorder: 对 Slots 重新排序
+            reorder_done: 对 Slots 的重新排序结束
+          records:
+            title: Slots
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Slots . 点击 "Add New Slot" 创建一个slot.
+          slot:
+            view_live_html: 查看 slot 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 slot
+            delete: 永久删除 slot
         auditions:
           actions:
             create_new: 建立新的 Audition
@@ -12,20 +27,24 @@ zh-CN:
             reorder_done: 对 Auditions 的重新排序结束
           records:
             title: Auditions
-            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
-
-            # There are no Auditions yet. Click "Add New Audition" to add your first audition.
+            sorry_no_results: 对不起，未找到结果。
             no_items_yet: 目前没有 Auditions . 点击 "Add New Audition" 创建一个audition.
           audition:
             view_live_html: 查看 audition 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 audition
             delete: 永久删除 audition
+      slots:
+        show:
+          other: 其他 Slots
       auditions:
         show:
           other: 其他 Auditions
   activerecord:
     attributes:
-      'refinery/auditions/audition':
+      refinery/auditions/slot:
+        timeslot: Timeslot
+        refinery_audition_id: Refinery Audition
+      refinery/auditions/audition:
         firstname: Firstname
         lastname: Lastname
         timeslot: Timeslot

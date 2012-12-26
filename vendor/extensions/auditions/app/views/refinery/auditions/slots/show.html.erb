@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @slot.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Timeslot</h1>
+    <p>
+      <%=raw @slot.timeslot %>
+    </p>
+  </section>
+  <section>
+    <h1>Refinery Audition</h1>
+    <p>
+      <%=raw @slot.refinery_audition_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="slots">
+      <% @slots.each do |slot| %>
+        <li>
+          <%= link_to slot.title, refinery.auditions_slot_path(slot) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

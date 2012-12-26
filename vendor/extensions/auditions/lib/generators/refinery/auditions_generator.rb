@@ -10,7 +10,7 @@ module Refinery
       append_file 'db/seeds.rb', :verbose => true do
         <<-EOH
 
-# Added by Refinery CMS Auditions extension
+# Added by Refinery CMS Slots extension
 Refinery::Auditions::Engine.load_seed
         EOH
       end

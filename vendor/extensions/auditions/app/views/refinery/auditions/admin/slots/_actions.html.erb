@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Auditions::Admin::SlotsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.auditions_admin_slots_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_auditions_admin_slot_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Auditions::Admin::SlotsController.sortable? && ::Refinery::Auditions::Slot.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Slots"),
+                 refinery.auditions_admin_slots_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Slots"),
+                 refinery.auditions_admin_slots_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

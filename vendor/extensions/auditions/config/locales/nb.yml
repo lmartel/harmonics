@@ -1,10 +1,27 @@
 nb:
   refinery:
     plugins:
+      slots:
+        title: Slots
       auditions:
         title: Auditions
     auditions:
       admin:
+        slots:
+          actions:
+            create_new: Lag en ny Slot
+            reorder: Endre rekkefølgen på Slots
+            reorder_done: Ferdig å endre rekkefølgen Slots
+          records:
+            title: Slots
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Slots enda. Klikk på "Lag en ny Slot" for å
+              legge til din første slot.
+          slot:
+            view_live_html: Vis hvordan denne slot ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne slot
+            delete: Fjern denne slot permanent
         auditions:
           actions:
             create_new: Lag en ny Audition
@@ -13,17 +30,25 @@ nb:
           records:
             title: Auditions
             sorry_no_results: Beklager! Vi fant ikke noen resultater.
-            no_items_yet: Det er ingen Auditions enda. Klikk på "Lag en ny Audition" for å legge til din første audition.
+            no_items_yet: Det er ingen Auditions enda. Klikk på "Lag en ny Audition"
+              for å legge til din første audition.
           audition:
-            view_live_html: Vis hvordan denne audition ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            view_live_html: Vis hvordan denne audition ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
             edit: Rediger denne audition
             delete: Fjern denne audition permanent
+      slots:
+        show:
+          other: Andre Slots
       auditions:
         show:
           other: Andre Auditions
   activerecord:
     attributes:
-      'refinery/auditions/audition':
+      refinery/auditions/slot:
+        timeslot: Timeslot
+        refinery_audition_id: Refinery Audition
+      refinery/auditions/audition:
         firstname: Firstname
         lastname: Lastname
         timeslot: Timeslot

@@ -1,4 +1,7 @@
 <% content_for :body do %>
+	<% if flash[:notice] %>
+    <%= flash[:notice] %>
+  <% end %>
   <%= form_for [refinery, :auditions, @audition] do |f| %>
 			<%= f.label "Name: "%>
 			<%= f.text_field :firstname %>
@@ -14,6 +17,8 @@
 			<%= f.text_field :year %><br />
 			<%= f.label "Voice: "%>
 			<%= f.text_field :voice %><br />
+			<%= f.label "Time: "%>
+			<%= f.select(:slot_id, @availabilities)%>
 			<%= f.submit %>
 		<% end %>
 

@@ -1,0 +1,6 @@
+TODO:
+
+V 1. Give a "submitted successfully" message on audition signup form
+V 2. Implement setting up and choosing from timeslots
+3. Force auditions to sort by timeslot
+4. Error handling for no timeslots left, validate auditions by slot_id instead of firstname

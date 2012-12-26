@@ -17,4 +17,21 @@ Refinery::Core::Engine.routes.append do
     end
   end
 
+
+  # Frontend routes
+  namespace :auditions do
+    resources :slots, :only => [:index, :show]
+  end
+
+  # Admin routes
+  namespace :auditions, :path => '' do
+    namespace :admin, :path => 'refinery/auditions' do
+      resources :slots, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
+
 end

@@ -1,11 +1,27 @@
 es:
   refinery:
     plugins:
+      slots:
+        title: Slots
       auditions:
         title: Auditions
-#        article: masculino/femenino
     auditions:
       admin:
+        slots:
+          actions:
+            create_new: Crear nuevo slot
+            reorder: Reordenar slots
+            reorder_done: Reordenación de slots completada
+          records:
+            title: Slots
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay slots todavía. Pulsa en "Crear nuevo Slot" para crear
+              tu primer slot.
+          slot:
+            view_live_html: Ver este slot como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este slot
+            delete: Borrar este slot para siempre
         auditions:
           actions:
             create_new: Crear nuevo audition
@@ -14,17 +30,25 @@ es:
           records:
             title: Auditions
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay auditions todavía. Pulsa en "Crear nuevo Audition" para crear tu primer audition.
+            no_items_yet: No hay auditions todavía. Pulsa en "Crear nuevo Audition"
+              para crear tu primer audition.
           audition:
-            view_live_html: Ver este audition como abierto al público <br/><em>(abre en ventana nueva)</em>
+            view_live_html: Ver este audition como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
             edit: Editar este audition
             delete: Borrar este audition para siempre
+      slots:
+        show:
+          other: Otros slots
       auditions:
         show:
           other: Otros auditions
   activerecord:
     attributes:
-      'refinery/auditions/audition':
+      refinery/auditions/slot:
+        timeslot: Timeslot
+        refinery_audition_id: Refinery Audition
+      refinery/auditions/audition:
         firstname: Firstname
         lastname: Lastname
         timeslot: Timeslot

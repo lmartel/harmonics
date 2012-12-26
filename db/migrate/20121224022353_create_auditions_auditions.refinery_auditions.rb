@@ -5,7 +5,6 @@ class CreateAuditionsAuditions < ActiveRecord::Migration
     create_table :refinery_auditions do |t|
       t.string :firstname
       t.string :lastname
-      t.datetime :timeslot
       t.string :dorm
       t.string :voice
       t.string :room
@@ -14,6 +13,8 @@ class CreateAuditionsAuditions < ActiveRecord::Migration
       t.string :year
       t.boolean :emailed
       t.integer :position
+      t.integer :slot_id
+
 
       t.timestamps
     end

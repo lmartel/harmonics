@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="slots">
+    <% @slots.each do |slot| %>
+      <li>
+        <%= link_to slot, refinery.auditions_slot_path(slot) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

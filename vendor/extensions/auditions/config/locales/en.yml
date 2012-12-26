@@ -1,10 +1,26 @@
 en:
   refinery:
     plugins:
+      slots:
+        title: Slots
       auditions:
         title: Auditions
     auditions:
       admin:
+        slots:
+          actions:
+            create_new: Add New Slot
+            reorder: Reorder Slots
+            reorder_done: Done Reordering Slots
+          records:
+            title: Slots
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Slots yet. Click "Add New Slot" to add your
+              first slot.
+          slot:
+            view_live_html: View this slot live <br/><em>(opens in a new window)</em>
+            edit: Edit this slot
+            delete: Remove this slot forever
         auditions:
           actions:
             create_new: Add New Audition
@@ -13,17 +29,24 @@ en:
           records:
             title: Auditions
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Auditions yet. Click "Add New Audition" to add your first audition.
+            no_items_yet: There are no Auditions yet. Click "Add New Audition" to
+              add your first audition.
           audition:
             view_live_html: View this audition live <br/><em>(opens in a new window)</em>
             edit: Edit this audition
             delete: Remove this audition forever
+      slots:
+        show:
+          other: Other Slots
       auditions:
         show:
           other: Other Auditions
   activerecord:
     attributes:
-      'refinery/auditions/audition':
+      refinery/auditions/slot:
+        timeslot: Timeslot
+        refinery_audition_id: Refinery Audition
+      refinery/auditions/audition:
         firstname: Firstname
         lastname: Lastname
         timeslot: Timeslot

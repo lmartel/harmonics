@@ -1,10 +1,26 @@
 fr:
   refinery:
     plugins:
+      slots:
+        title: Slots
       auditions:
         title: Auditions
     auditions:
       admin:
+        slots:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Slot
+            reorder: Réordonner les Slots
+            reorder_done: Fin de réordonnancement des Slots
+          records:
+            title: Slots
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Slot. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Slot" pour créer votre premi(er/ère) slot.
+          slot:
+            view_live_html: Voir ce(t/tte) slot <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) slot
+            delete: Supprimer définitivement ce(t/tte) slot
         auditions:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Audition
@@ -12,18 +28,25 @@ fr:
             reorder_done: Fin de réordonnancement des Auditions
           records:
             title: Auditions
-            sorry_no_results: "Désolé ! Aucun résultat."
-            no_items_yet: 'Il n''y a actuellement aucun(e) Audition. Cliquer sur "Créer un(e) nouve(au/l/lle) Audition" pour créer votre premi(er/ère) audition.'
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Audition. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Audition" pour créer votre premi(er/ère) audition.
           audition:
             view_live_html: Voir ce(t/tte) audition <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) audition
             delete: Supprimer définitivement ce(t/tte) audition
+      slots:
+        show:
+          other: Autres Slots
       auditions:
         show:
           other: Autres Auditions
   activerecord:
     attributes:
-      'refinery/auditions/audition':
+      refinery/auditions/slot:
+        timeslot: Timeslot
+        refinery_audition_id: Refinery Audition
+      refinery/auditions/audition:
         firstname: Firstname
         lastname: Lastname
         timeslot: Timeslot

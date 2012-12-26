@@ -1,10 +1,26 @@
 sk:
   refinery:
     plugins:
+      slots:
+        title: Slots
       auditions:
         title: Auditions
     auditions:
       admin:
+        slots:
+          actions:
+            create_new: Pridať Slot
+            reorder: Preusporiadať Slots
+            reorder_done: Koniec radenia Slots
+          records:
+            title: Slots
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Slots. Kliknite na "Pridať Slot"
+              pre pridanie prvého slot.
+          slot:
+            view_live_html: Zobraziť náhľad slot<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť slot
+            delete: Zmazať slot
         auditions:
           actions:
             create_new: Pridať Audition
@@ -13,17 +29,24 @@ sk:
           records:
             title: Auditions
             sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
-            no_items_yet: Nie sú vytvorené žiadne Auditions. Kliknite na "Pridať Audition" pre pridanie prvého audition.
+            no_items_yet: Nie sú vytvorené žiadne Auditions. Kliknite na "Pridať Audition"
+              pre pridanie prvého audition.
           audition:
             view_live_html: Zobraziť náhľad audition<br/><em>(otvorí sa v novom okne)</em>
             edit: Upraviť audition
             delete: Zmazať audition
+      slots:
+        show:
+          other: Daľšie Slots
       auditions:
         show:
           other: Daľšie Auditions
   activerecord:
     attributes:
-      'refinery/auditions/audition':
+      refinery/auditions/slot:
+        timeslot: Timeslot
+        refinery_audition_id: Refinery Audition
+      refinery/auditions/audition:
         firstname: Firstname
         lastname: Lastname
         timeslot: Timeslot
