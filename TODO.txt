@@ -1,6 +1,6 @@
 TODO:
-
-V 1. Give a "submitted successfully" message on audition signup form
-V 2. Implement setting up and choosing from timeslots
-3. Force auditions to sort by timeslot
-4. Error handling for no timeslots left, validate auditions by slot_id instead of firstname
+1. Set up remaining content pages
+2. Set up new /stuff
+3. Work on design
+4. Add music (?)
+5. Add store

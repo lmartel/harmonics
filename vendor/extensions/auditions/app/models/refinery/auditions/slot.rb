@@ -2,7 +2,7 @@ module Refinery
   module Auditions
     class Slot < Refinery::Core::BaseModel
 
-      has_one :audition, :class_name => "Refinery::Auditions::Audition"
+      has_one :audition, :class_name => "Refinery::Auditions::Audition", :dependent => :destroy
 
       attr_accessible :timeslot, :position
       # def title was created automatically because you didn't specify a string field

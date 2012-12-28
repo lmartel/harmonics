@@ -1,2 +1,3 @@
-<%= will_paginate @auditions if Refinery::Auditions::Admin::AuditionsController.pageable? %>
+<%# Pagination disabled here because refinery requires crudified index method for it to work %>
+<%#= will_paginate @auditions if Refinery::Auditions::Admin::AuditionsController.pageable? %>
 <%= render 'sortable_list' %>

@@ -15,8 +15,8 @@ en:
           records:
             title: Slots
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Slots yet. Click "Add New Slot" to add your
-              first slot.
+            no_items_yet: There are no Slots yet. Use the form above to create new slots,
+             or click "Add New Slot" to add an individual slot.
           slot:
             view_live_html: View this slot live <br/><em>(opens in a new window)</em>
             edit: Edit this slot

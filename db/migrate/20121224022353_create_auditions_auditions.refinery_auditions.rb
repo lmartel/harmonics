@@ -12,7 +12,6 @@ class CreateAuditionsAuditions < ActiveRecord::Migration
       t.string :phone
       t.string :year
       t.boolean :emailed
-      t.integer :position
       t.integer :slot_id
 
 

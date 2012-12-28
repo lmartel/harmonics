@@ -3,7 +3,9 @@ Refinery::Core::Engine.routes.append do
   # Frontend routes
   namespace :auditions do
     match '' => 'auditions#signup', :via => :get, :as => :audition
-    resources :auditions, :path => '', :except => [:index]
+    resources :auditions, :path => '', :except => [:index, :show]
+    #refinery/crudify defaults #show to auditions.:id rather than auditions/:id
+    match '/:id' => 'auditions#show', :via => :get, :as => :audition
   end
 
   # Admin routes
@@ -20,7 +22,8 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   namespace :auditions do
-    resources :slots, :only => [:index, :show]
+    # Frontend users may not access slots
+    # resources :slots, :only => [:index, :show]
   end
 
   # Admin routes
@@ -29,6 +32,8 @@ Refinery::Core::Engine.routes.append do
       resources :slots, :except => :show do
         collection do
           post :update_positions
+          post :populate
+          delete :obliterate
         end
       end
     end

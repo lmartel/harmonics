@@ -1,7 +1,30 @@
 <section id='records'>
+
+	<%= form_tag('/refinery/auditions/slots/populate', :class => "populate_form", :method => :post) do %>
+		<%= label_tag :start_time, "CREATE NEW SLOTS -- Start date/time: "%>
+		<%= datetime_select :populate_form, :start_time %><br />
+		<%= label_tag "populate_form[duration]", "Length (minutes): " %>
+		<%= number_field_tag "populate_form[duration]" %><br />
+		<%= label_tag :end_time, "End date/time: "%>
+		<%= datetime_select :populate_form, :end_time %><br />
+		<%= submit_tag "Populate!" %>
+	<% end %><br />
+
   <%= render 'records' %>
+
+  <%= form_tag('/refinery/auditions/slots/obliterate', :class => "obliterate_form", :method => :delete) do %>
+		<strong>Enter "DELETE ALL AUDITIONS" to empty the auditions database. <br />
+			<em><%= label_tag "obliterate_form[passphrase]", "This will delete every slot and audition." %></em>
+		</strong>
+		<%= text_field_tag "obliterate_form[passphrase]" %>
+		<%= submit_tag "Obliterate!" %>
+	<% end %>
+
 </section>
 <aside id='actions'>
   <%= render 'actions' %>
 </aside>
+
 <%= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::Auditions::Admin::SlotsController.sortable? and ::Refinery::Auditions::Slot.count > 1 %>
+
+

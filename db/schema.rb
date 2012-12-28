@@ -11,12 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121224022353) do
+ActiveRecord::Schema.define(:version => 20121226092708) do
 
   create_table "refinery_auditions", :force => true do |t|
     t.string   "firstname"
     t.string   "lastname"
-    t.datetime "timeslot"
     t.string   "dorm"
     t.string   "voice"
     t.string   "room"
@@ -24,7 +23,13 @@ ActiveRecord::Schema.define(:version => 20121224022353) do
     t.string   "phone"
     t.string   "year"
     t.boolean  "emailed"
-    t.integer  "position"
+    t.integer  "slot_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_auditions_slots", :force => true do |t|
+    t.datetime "timeslot"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

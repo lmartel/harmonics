@@ -17,12 +17,6 @@
   </div>
   
   <div class='field'>
-    <%= f.label :timeslot -%>
-    <%= f.datetime_select :timeslot  -%>
-
-  </div>
-  
-  <div class='field'>
     <%= f.label :dorm -%>
     <%= f.text_field :dorm  -%>
 
@@ -55,6 +49,13 @@
   <div class='field'>
     <%= f.label :year -%>
     <%= f.text_field :year  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :time -%>
+    <% @availabilities = Refinery::Auditions::Slot.available_timeslots unless @availabilities %>
+    <%= f.select :slot_id, @availabilities -%>
 
   </div>
   

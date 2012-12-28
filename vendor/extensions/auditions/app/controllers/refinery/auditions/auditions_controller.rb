@@ -37,7 +37,7 @@ module Refinery
     protected
 
       def find_all_auditions
-        @auditions = Audition.order('position ASC')
+        @auditions = Audition.all
       end
 
       def find_page

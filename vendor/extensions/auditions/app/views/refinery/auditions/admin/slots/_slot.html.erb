@@ -5,10 +5,6 @@
   </span>
   <span class='actions'>
     
-    <%= link_to refinery_icon_tag("application_go.png"), refinery.auditions_slot_path(slot),
-        :title => t('.view_live_html'),
-        :target => "_blank" %>
-    
     <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_auditions_admin_slot_path(slot),
          :title => t('.edit') %>
     <%= link_to refinery_icon_tag("delete.png"), refinery.auditions_admin_slot_path(slot),

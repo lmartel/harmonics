@@ -1,7 +1,7 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(audition) -%>">
   <span class='title'>
-    <%= audition.firstname %>
-
+    <%= audition.name %> at 
+    <%= audition.slot.formatted_timeslot %>
   </span>
   <span class='actions'>
     
