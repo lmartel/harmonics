@@ -1,3 +1,4 @@
+<%= raw @page.content_for(:body) %>
 <% content_for :body do %>
 	<% if flash[:notice] %>
     <%= flash[:notice] %>

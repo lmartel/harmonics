@@ -23,3 +23,27 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: stanfordharmonics_development
+#   pool: 5
+#   username: leo
+#   password:
+
+# test:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: stanfordharmonics_test
+#   pool: 5
+#   username: leo
+#   password:
+
+# test:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: stanfordharmonics_production
+#   pool: 5
+#   username: admin
+#   password:

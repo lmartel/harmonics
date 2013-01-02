@@ -14,3 +14,6 @@ Refinery::Auditions::Engine.load_seed
 
 # Added by Refinery CMS Slots extension
 Refinery::Auditions::Engine.load_seed
+
+# Added by Refinery CMS Members extension
+Refinery::People::Engine.load_seed

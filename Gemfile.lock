@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-auditions (1.0)
       refinerycms-core (~> 2.0.9)
+    refinerycms-members (1.0)
+      refinerycms-core (~> 2.0.9)
 
 GEM
   remote: https://rubygems.org/
@@ -187,6 +189,7 @@ DEPENDENCIES
   refinerycms (~> 2.0.0)
   refinerycms-auditions!
   refinerycms-i18n (~> 2.0.0)
+  refinerycms-members!
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

@@ -4,3 +4,6 @@ TODO:
 3. Work on design
 4. Add music (?)
 5. Add store
+
+PGSQL start server:
+sudo su postgres -c '/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data/ -l /usr/local/pgsql/server.log'
