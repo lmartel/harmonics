@@ -4,22 +4,22 @@
     <%= flash[:notice] %>
   <% end %>
   <%= form_for [refinery, :auditions, @audition] do |f| %>
-		<%= f.label "Name: "%>
-		<%= f.text_field :firstname %>
-		<%= f.text_field :lastname %><br />
-		<%= f.label "Email: "%>
-		<%= f.text_field :email %><br />
-		<%= f.label "Phone: "%>
-		<%= f.text_field :phone %><br />
-		<%= f.label "Dorm: "%>
-		<%= f.text_field :dorm %>
-		<%= f.text_field :room %><br />
-		<%= f.label "Year: "%>
-		<%= f.text_field :year %><br />
-		<%= f.label "Voice: "%>
-		<%= f.text_field :voice %><br />
-		<%= f.label "Time: "%>
-		<%= f.select(:slot_id, @availabilities)%>
+			<%= f.label "Name: "%>
+			<%= f.text_field :firstname %>
+			<%= f.text_field :lastname %>
+			<%= f.label "Email: "%>
+			<%= f.text_field :email %>
+			<%= f.label "Phone: "%>
+			<%= f.text_field :phone %><br />
+			<%= f.label "Dorm: "%>
+			<%= f.text_field :dorm %>
+			<%= f.text_field :room %><br />
+			<%= f.label "Year: "%>
+			<%= f.text_field :year %><br />
+			<%= f.label "Voice: "%>
+			<%= f.text_field :voice %><br />
+			<%= f.label "Time: "%>
+			<%= f.select(:slot_id, @availabilities)%>
 		<%= f.submit %>
 	<% end %>
 

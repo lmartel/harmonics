@@ -1,9 +1,16 @@
 TODO:
-1. Set up remaining content pages
-2. Set up new /stuff
-3. Work on design
-4. Add music (?)
-5. Add store
+Add something to blank space next to logo - music player? hero?
+Create sidebar
+Create hero for announcements on homepage
+Remove home from menu (?)
+Fix members page
+Remove bootstrap css from refinery page
+Add copy to remaining pages
+
+Get deployed on heroku
+
+Add music (?)
+Add store
 
 PGSQL start server:
 sudo su postgres -c '/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data/ -l /usr/local/pgsql/server.log'
