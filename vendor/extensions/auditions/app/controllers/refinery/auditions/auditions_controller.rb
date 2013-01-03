@@ -27,11 +27,11 @@ module Refinery
       def create
         @audition = Audition.new(params[:audition])
         if @audition.save
-          message = "Thanks for signing up! You're all set, #{@audition.firstname}!"
+          notice = "Thanks for signing up! You're all set, #{@audition.firstname}!"
         else
-          message = "Oops, there was a problem saving your info."
+          alert = "Oops, there was a problem saving your info. Did you fill in all the required fields?"
         end
-        redirect_to refinery.auditions_auditions_path, :notice => message
+        redirect_to refinery.auditions_auditions_path, :notice => notice, :alert => alert
       end
 
     protected

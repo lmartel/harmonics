@@ -1,26 +1,22 @@
 <%= raw @page.content_for(:body) %>
 <% content_for :body do %>
-	<% if flash[:notice] %>
-    <%= flash[:notice] %>
-  <% end %>
-  <%= form_for [refinery, :auditions, @audition] do |f| %>
-			<%= f.label "Name: "%>
-			<%= f.text_field :firstname %>
-			<%= f.text_field :lastname %>
-			<%= f.label "Email: "%>
-			<%= f.text_field :email %>
-			<%= f.label "Phone: "%>
-			<%= f.text_field :phone %><br />
-			<%= f.label "Dorm: "%>
-			<%= f.text_field :dorm %>
-			<%= f.text_field :room %><br />
-			<%= f.label "Year: "%>
-			<%= f.text_field :year %><br />
-			<%= f.label "Voice: "%>
-			<%= f.text_field :voice %><br />
-			<%= f.label "Time: "%>
-			<%= f.select(:slot_id, @availabilities)%>
-		<%= f.submit %>
+	
+  <%= simple_form_for([refinery, :auditions, @audition], :html => {:class => 'form-horizontal'})  do |f| %>
+		  <% if flash[:alert] %>
+		    <p class="error"><%= flash[:alert] %></p>
+		  <% elsif flash[:notice] %>
+		  	<p class="success"><%= flash[:notice] %></p>
+		  <% end %>
+			<%= f.input :firstname, label: "First Name" %>
+			<%= f.input :lastname, label: "Last Name" %>
+			<%= f.input :email %>
+			<%= f.input :phone, label: "Cell Phone No." %>
+			<%= f.input :dorm %>
+			<%= f.input :room, label: "Room Number" %>
+			<%= f.input :year, label: "Graduation Year" %>
+			<%= f.input :voice, label: "Voice Part", hint: "Alto, Tenor, etc. \"I don't know\" is totally fine!" %>
+			<%= f.association :slot, label: "Audition Time", collection: @availabilities.count > 0 ? @availabilities : ["No slots available =("] %>
+			<%= f.button :submit %>
 	<% end %>
 
 <% end %>

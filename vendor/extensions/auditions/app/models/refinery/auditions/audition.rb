@@ -10,10 +10,10 @@ module Refinery
       acts_as_indexed :fields => [:firstname, :lastname, :dorm, :voice, :room, :email, :phone, :year]
 
       # must have a valid associated slot, and that slot must be unique
-      validates :slot, :presence => true#, :uniqueness => true
+      validates :slot, :presence => true
       validates :slot_id, :uniqueness => true
 
-      validates :name, :presence => true
+      validates_presence_of :firstname, :lastname, :email, :phone, :dorm, :room, :year
 
       #TODO: add more mandatory fields and some level of smartness (phone formatting, email checking, etc)
 
