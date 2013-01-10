@@ -26,8 +26,9 @@ group :assets do
   gem "less-rails"
   gem 'twitter-bootstrap-rails'
   #gem 'bootstrap-sass'
-  gem 'simple_form'
 end
+
+gem 'simple_form'
 
 gem 'jquery-rails', '~> 2.0.0'
 
