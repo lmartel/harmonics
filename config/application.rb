@@ -66,6 +66,6 @@ module Stanfordharmonics
     config.assets.version = '1.0'
 
     # Necessary for Refinery to compile its assets
-    config.assets.initialize_on_precompile = true
+    config.assets.initialize_on_precompile = false
   end
 end
