@@ -1,0 +1,18 @@
+<div class="member">
+  <section class="picture">
+    <%= image_fu member.photo, '400x300' %>
+    <h1><%= member.name %></h1>
+  </section>
+  <section>
+    <h4><em>Graduating in <%= member.year %>, 
+      <%= member.name.split.first %> is a 
+      <%= member.voice %> 
+      <% if member.major.length > 0 %> majoring in <%= member.major %><% end %>
+       from <%= member.hometown %>.</em></h4>
+  </section>
+  <section>
+    <p>
+      <%=raw member.bio %>
+    </p>
+  </section>
+</div>

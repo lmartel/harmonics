@@ -64,5 +64,8 @@ module Stanfordharmonics
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Necessary for Refinery to compile its assets
+    config.assets.initialize_on_precompile = true
   end
 end

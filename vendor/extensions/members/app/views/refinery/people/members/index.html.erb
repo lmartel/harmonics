@@ -1,0 +1,67 @@
+<%# Note: we get @page because want this page to match the CMS-able 'members' page %>
+<% @page = Refinery::Page.find('members') %>
+<%= render '/refinery/content_page' %>
+
+<ul id="members" class="nav nav-tabs">
+  <% @members.each do |member| %>
+    <li>
+      <a href=<%= "##{member.name.tr(" ", "_")}" %> data-toggle="tab">
+      	<%= member.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+<div class="tab-content">
+  <% @members.each do |member| %>
+    <div class="tab-pane fade" id=<%= "#{member.name.tr(" ", "_")}" %>>
+    	<%= render member %>
+    </div>
+  <% end %>
+</div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+	//sorts tabs by width to improve filling. TODO: implement 
+	var ul = $("#members");
+	var li = ul.children("li");
+	//sorts the li array by tab width, desc
+	li.sort(function(a, b){ 
+		return $(b).width() - $(a).width();
+	});
+
+	//First-Fit Descending bin packing
+	rows = [];
+	lengths = {};
+	while(li.length > 0){
+		var nRows = rows.length;
+		var fitFound = false;
+		//For each row...
+		for(var row = 0; row < nRows; row++){
+			if(fitFound) break;
+
+			//Try each tab (in order)
+			$.each(li, function(i, val){
+
+				//Until one fits.
+				if( $(val).width() + lengths[row] < $("#members").width() ){
+					rows[row].push($(val));
+					lengths[row] += $(val).width();
+					fitFound = true;
+					li.splice(i, 1);
+					return false; //breaks the .each loop
+				}
+			});
+		}
+		if(!fitFound){
+			//Starts a new row
+			var item = li.first()
+			li.splice(0,1);
+			rows[nRows] = [$(item)];
+			lengths[nRows] = $(item).width();
+		}
+	}
+	//flattens rows array
+	li = $.map(rows, function(n){
+   return n;
+	});
+	ul.append(li);
+</script>

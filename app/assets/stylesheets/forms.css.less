@@ -1,0 +1,33 @@
+.simple_form {
+  @indent: 185px;
+  label {
+    float: left;
+    width: @indent - 20px;
+    text-align: right;
+    margin: 2px 10px;
+  }
+  div.input {
+    margin-bottom: 10px;
+  }
+  .btn {
+    margin-left: @indent;
+  }
+  .help-block, .error, .success {
+    clear: left;
+    margin-left: @indent;
+    display: block;
+  }
+  .error, .success {
+  	color: #D00;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .success {
+  	color: #0D0;
+  }
+  .help-block {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 2px !important;
+  }
+}

@@ -1,0 +1,22 @@
+<% content_for :body_content_title do %>
+  <%= @member.name %>
+<% end %>
+
+<% content_for :body do %>
+  <%= render @member %>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="members">
+      <% @members.each do |member| %>
+        <li>
+          <%= link_to member.name, refinery.people_member_path(member) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
