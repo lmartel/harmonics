@@ -42,26 +42,70 @@ body { padding-top: 60px; }
 @baseFontFamily: Arial, Verdana, sans;
 
 body { 
-	background-image: url("bg.jpg"); 
+	background-image: url("wood.jpg");
+	font-size: 20px;
+	line-height: 31px;
+	font-family: 'Exo', sans-serif;
 }
 
-#logo {
+h1, h2, h3, h4, h5 {
+	font-family: 'Georgia', serif;
+}
+
+header#header{
+	position: relative;
+	height: 200px;
+
+	#logo {
+	position: relative;
+	z-index: -1;
 	margin-left: -100px;
-	margin-top: -25px;
+	//margin-top: -25px;
+	margin-top: -10px;
 	margin-bottom: -70px;
-}
+	}
 
-#page {
-	background-color: @grayDarker;
-	border-radius: 15px;
+	.hero-unit {
+		position: absolute;
+		top: -1px;
+		right: 0;
+		height: 200px - 20px;
+		//todo: fix top padding to work both with header and no header
+		//todo: darker font color;
+		padding: 0px 30px 10px;
+		width: auto;
+		max-width: 60%;
+		background-color: @grayDark;
+		overflow: hidden;
 
-	div {
-		margin: 0px 5px 5px;
+		h1 {
+			text-align: center;
+		}
 	}
 }
 
+#page {
+	background-image: url("maze.png"); 
+	border-radius: 15px;
+
+	div {
+		margin: 0px 3px 5px;
+	}
+}
+
+#page, .hero-unit {
+	border: 2px;
+	border-style: solid;
+	border-color: @grayLight;
+}
+
+.sidebar {
+	font-size: 16px;
+	line-height: 23px;
+}
+
 .navbar {
-	font-family: "Destroy Regular", "28 Days Later", Arial, Verdana, sans;
+	//font-family: "Destroy Regular", "28 Days Later", Arial, Verdana, sans;
 
 	.brand {
 		padding-top: 0px;
