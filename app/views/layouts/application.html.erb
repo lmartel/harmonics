@@ -18,8 +18,8 @@
           </div>
           <div class="span3 sidebar">
             <div class="span-content">
-              <% sidebar = Refinery::Page.find("sidebar") %>
-              <%= raw sidebar.content_for(:body) %>
+              <% sidebar = Refinery::Page.where(:slug => "sidebar").first %>
+              <%= raw sidebar.content_for(:body) if sidebar %>
             </div>
           </div>
         </div>

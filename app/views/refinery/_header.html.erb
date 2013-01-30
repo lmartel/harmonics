@@ -3,8 +3,8 @@
   <%= image_tag("logo.png") %>
 </h1>
 <div class="hero-unit">
-  <% announcement = Refinery::Page.find("announcement") %>
-  <%= raw announcement.content_for(:body) %>
+  <% announcement = Refinery::Page.where(:slug => "announcement").first %>
+  <%= raw announcement.content_for(:body) if announcement %>
   <p>
     <a class="btn btn-primary btn-large">
       Learn more
