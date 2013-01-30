@@ -54,14 +54,14 @@ h1, h2, h3, h4, h5 {
 
 header#header{
 	position: relative;
-	height: 200px;
+	height: 250px;
 
 	#logo {
 	position: relative;
 	z-index: -1;
 	margin-left: -100px;
 	//margin-top: -25px;
-	margin-top: -10px;
+	margin-top: 0px;
 	margin-bottom: -70px;
 	}
 
@@ -69,27 +69,30 @@ header#header{
 		position: absolute;
 		top: -1px;
 		right: 0;
-		height: 200px - 20px;
+		height: 85%;
 		//todo: fix top padding to work both with header and no header
-		//todo: darker font color;
 		padding: 0px 30px 10px;
 		width: auto;
 		max-width: 60%;
-		background-color: @grayDark;
+		background-color: #08052B;
 		overflow: hidden;
 
 		h1 {
 			text-align: center;
+			//color: #0B0080;
 		}
 	}
+}
+
+.main .span-content {
+	margin: 0px 10px 10px !important;
 }
 
 #page {
 	background-image: url("maze.png"); 
 	border-radius: 15px;
-
 	div {
-		margin: 0px 3px 5px;
+		margin: 0px;
 	}
 }
 
