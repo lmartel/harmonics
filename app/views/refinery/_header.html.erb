@@ -5,11 +5,6 @@
 <div class="hero-unit">
   <% announcement = Refinery::Page.where(:slug => "announcement").first %>
   <%= raw announcement.content_for(:body) if announcement %>
-  <p>
-    <a class="btn btn-primary btn-large">
-      Learn more
-    </a>
-  </p>
 </div>
 <%= render(:partial => "/refinery/menu", :locals => {
              :dom_id => 'menu',
