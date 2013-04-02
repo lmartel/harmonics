@@ -1,0 +1,17 @@
+<% future = [] %>
+<% past = [] %>
+<% @events.each do |event| %>
+ <% if event.date.future? then future << event else past << event end %>
+<% end %>
+<% content_for :body do %>
+  <% future.each do |event| %>
+    <%= render :partial => "event_summary", :locals => { :event => event } %>
+  <% end %>
+  (Interested in scheduling us for a performance? Please shoot us an email!)
+  <h1>Past Gigs</h1>
+  <% past.each do |event| %>
+    <%= render :partial => "event_summary", :locals => { :event => event } %>
+  <% end %>
+<% end %>
+
+<%= render '/refinery/content_page' %>

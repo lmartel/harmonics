@@ -1,0 +1,12 @@
+<div class="media">
+  <a class="pull-left" href=<%= refinery.events_event_path(event) %>>
+    <%= image_fu event.photo, '100x100', {:class => "media-object"} %>
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to event.title, refinery.events_event_path(event) %>
+    </h4>
+    <%= Date::DAYNAMES[event.date.wday] %>, <%= event.date.to_s(:long_ordinal) %>
+  </div>
+  <br>
+</div>

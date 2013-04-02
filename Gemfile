@@ -59,3 +59,4 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 
 gem 'refinerycms-auditions', :path => 'vendor/extensions'
 gem 'refinerycms-members', :path => 'vendor/extensions'
+gem 'refinerycms-events', :path => 'vendor/extensions'

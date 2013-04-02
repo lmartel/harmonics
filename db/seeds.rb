@@ -17,3 +17,6 @@ Refinery::Auditions::Engine.load_seed
 
 # Added by Refinery CMS Members extension
 Refinery::People::Engine.load_seed
+
+# Added by Refinery CMS Events extension
+Refinery::Events::Engine.load_seed

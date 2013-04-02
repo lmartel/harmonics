@@ -1,8 +1,8 @@
 Time to start wrapping up.
 Priority:
-1. Calendar
-2. Contact
-3. Footer (inc. a cappella records)
+    1. Calendar
+    2. Contact
+    3. Footer (inc. a cappella records)
 4. Albums
 5. Media
 6. News and/or Hero

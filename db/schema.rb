@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121229092126) do
+ActiveRecord::Schema.define(:version => 20130402050137) do
 
   create_table "refinery_auditions", :force => true do |t|
     t.string   "firstname"
@@ -30,6 +30,41 @@ ActiveRecord::Schema.define(:version => 20121229092126) do
 
   create_table "refinery_auditions_slots", :force => true do |t|
     t.datetime "timeslot"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_calendar_events", :force => true do |t|
+    t.string   "title"
+    t.date     "from"
+    t.date     "to"
+    t.string   "registration_link"
+    t.string   "excerpt"
+    t.text     "description"
+    t.integer  "position"
+    t.boolean  "featured"
+    t.string   "slug"
+    t.integer  "venue_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "refinery_calendar_venues", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "url"
+    t.string   "phone"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_events", :force => true do |t|
+    t.string   "title"
+    t.datetime "date"
+    t.integer  "photo_id"
+    t.text     "blurb"
+    t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
