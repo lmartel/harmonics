@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      press:
+        title: Press
+    press:
+      admin:
+        press:
+          actions:
+            create_new: 建立新的 Endorsement
+            reorder: 对 Press 重新排序
+            reorder_done: 对 Press 的重新排序结束
+          records:
+            title: Press
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Press yet. Click "Add New Endorsement" to add your first endorsement.
+            no_items_yet: 目前没有 Press . 点击 "Add New Endorsement" 创建一个endorsement.
+          endorsement:
+            view_live_html: 查看 endorsement 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 endorsement
+            delete: 永久删除 endorsement
+      press:
+        show:
+          other: 其他 Press
+  activerecord:
+    attributes:
+      'refinery/press/endorsement':
+        quote: Quote
+        source: Source
+        link: Link

@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      press:
+        title: Press
+    press:
+      admin:
+        press:
+          actions:
+            create_new: Pridať Endorsement
+            reorder: Preusporiadať Press
+            reorder_done: Koniec radenia Press
+          records:
+            title: Press
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Press. Kliknite na "Pridať Endorsement" pre pridanie prvého endorsement.
+          endorsement:
+            view_live_html: Zobraziť náhľad endorsement<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť endorsement
+            delete: Zmazať endorsement
+      press:
+        show:
+          other: Daľšie Press
+  activerecord:
+    attributes:
+      'refinery/press/endorsement':
+        quote: Quote
+        source: Source
+        link: Link

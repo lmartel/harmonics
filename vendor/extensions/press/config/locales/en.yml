@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      press:
+        title: Press
+    press:
+      admin:
+        press:
+          actions:
+            create_new: Add New Endorsement
+            reorder: Reorder Press
+            reorder_done: Done Reordering Press
+          records:
+            title: Press
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Press yet. Click "Add New Endorsement" to add your first endorsement.
+          endorsement:
+            view_live_html: View this endorsement live <br/><em>(opens in a new window)</em>
+            edit: Edit this endorsement
+            delete: Remove this endorsement forever
+      press:
+        show:
+          other: Other Press
+  activerecord:
+    attributes:
+      'refinery/press/endorsement':
+        quote: Quote
+        source: Source
+        link: Link

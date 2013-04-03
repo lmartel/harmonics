@@ -9,6 +9,8 @@ PATH
       refinerycms-core (~> 2.0.9)
     refinerycms-members (1.0)
       refinerycms-core (~> 2.0.9)
+    refinerycms-press (1.0)
+      refinerycms-core (~> 2.0.9)
 
 GEM
   remote: https://rubygems.org/
@@ -217,6 +219,7 @@ DEPENDENCIES
   refinerycms-events!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-members!
+  refinerycms-press!
   sass-rails (~> 3.2.3)
   simple_form
   sqlite3

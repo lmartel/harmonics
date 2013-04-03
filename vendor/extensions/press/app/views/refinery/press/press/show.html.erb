@@ -1,0 +1,40 @@
+<%# this page not used %>
+<% content_for :body_content_title do %>
+  <%= @endorsement.quote %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Quote</h1>
+    <p>
+      <%=raw @endorsement.quote %>
+    </p>
+  </section>
+  <section>
+    <h1>Source</h1>
+    <p>
+      <%=raw @endorsement.source %>
+    </p>
+  </section>
+  <section>
+    <h1>Link</h1>
+    <p>
+      <%=raw @endorsement.link %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="press">
+      <% @press.each do |endorsement| %>
+        <li>
+          <%= link_to endorsement.quote, refinery.press_endorsement_path(endorsement) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

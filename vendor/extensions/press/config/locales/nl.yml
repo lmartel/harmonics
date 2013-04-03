@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      press:
+        title: Press
+    press:
+      admin:
+        press:
+          actions:
+            create_new: Maak een nieuwe Endorsement
+            reorder: Wijzig de volgorde van de Press
+            reorder_done: Klaar met het wijzingen van de volgorde van de Press
+          records:
+            title: Press
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Press. Druk op 'Maak een nieuwe Endorsement' om de eerste aan te maken.
+          endorsement:
+            view_live_html: Bekijk deze endorsement op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze endorsement
+            delete: Verwijder deze endorsement voor eeuwig
+      press:
+        show:
+          other: Andere Press
+  activerecord:
+    attributes:
+      'refinery/press/endorsement':
+        quote: Quote
+        source: Source
+        link: Link

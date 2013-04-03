@@ -24,8 +24,12 @@ Refinery::Events::Engine.load_seed
 # Added by Refinery CMS Albums extension
 Refinery::Albums::Engine.load_seed
 
-# remove slots page (should not exist)
-Refinery::Page.find_by_slug("slots").destroy!
+# Added by Refinery CMS Press extension
+Refinery::Press::Engine.load_seed
+
+# remove pages that refinery auto-generates but should not exist
+slots = Refinery::Page.find_by_slug("slots")
+slots.destroy! unless slots.nil?
 
 # create admin user
 if Refinery::User.find_by_username("admin").nil?
@@ -81,5 +85,3 @@ Refinery::People::Member.create(name: "Test Daria", year: 2016, photo_id: nil, v
 
 Refinery::Events::Event.create(title: "EVONT IN FUTURE", date: "2018-01-01 00:00:00", photo_id: nil, blurb: "<p>waagh the future</p>")
 Refinery::Events::Event.create(title: "eveunt in PAST", date: "2008-01-01 00:00:00", photo_id: nil, blurb: "<p>THIS WAS IN THE PAST</p>")
-
-

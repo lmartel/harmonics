@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      press:
+        title: Press
+    press:
+      admin:
+        press:
+          actions:
+            create_new: Lag en ny Endorsement
+            reorder: Endre rekkefølgen på Press
+            reorder_done: Ferdig å endre rekkefølgen Press
+          records:
+            title: Press
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Press enda. Klikk på "Lag en ny Endorsement" for å legge til din første endorsement.
+          endorsement:
+            view_live_html: Vis hvordan denne endorsement ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne endorsement
+            delete: Fjern denne endorsement permanent
+      press:
+        show:
+          other: Andre Press
+  activerecord:
+    attributes:
+      'refinery/press/endorsement':
+        quote: Quote
+        source: Source
+        link: Link

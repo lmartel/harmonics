@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      press:
+        title: Press
+#        article: masculino/femenino
+    press:
+      admin:
+        press:
+          actions:
+            create_new: Crear nuevo endorsement
+            reorder: Reordenar press
+            reorder_done: Reordenación de press completada
+          records:
+            title: Press
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay press todavía. Pulsa en "Crear nuevo Endorsement" para crear tu primer endorsement.
+          endorsement:
+            view_live_html: Ver este endorsement como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este endorsement
+            delete: Borrar este endorsement para siempre
+      press:
+        show:
+          other: Otros press
+  activerecord:
+    attributes:
+      'refinery/press/endorsement':
+        quote: Quote
+        source: Source
+        link: Link
