@@ -4,39 +4,21 @@
 
 <% content_for :body do %>
   <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @album.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Date</h1>
     <p>
       <%=raw @album.date %>
     </p>
   </section>
   <section>
-    <h1>Photo</h1>
     <p>
-      <%= image_fu @album.photo, nil %>
+      <%= image_fu @album.photo, '400x400' %>
     </p>
   </section>
   <section>
-    <h1>Summary</h1>
-    <p>
-      <%=raw @album.summary %>
-    </p>
+    <h3><%= link_to 'Purchase Link', @album.purchase_link %></h3>
   </section>
   <section>
-    <h1>Description</h1>
     <p>
       <%=raw @album.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Purchase Link</h1>
-    <p>
-      <%=raw @album.purchase_link %>
     </p>
   </section>
 <% end %>

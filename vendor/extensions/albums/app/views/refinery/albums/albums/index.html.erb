@@ -1,11 +1,7 @@
 <% content_for :body do %>
-  <ul id="albums">
-    <% @albums.each do |album| %>
-      <li>
-        <%= link_to album.title, refinery.albums_album_path(album) %>
-      </li>
-    <% end %>
-  </ul>
+  <% @albums.each do |album| %>
+    <%= render :partial => "album_summary", :locals => { :album => album } %>
+  <% end %>
 <% end %>
 
 <%= render '/refinery/content_page' %>

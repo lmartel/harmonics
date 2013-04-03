@@ -6,7 +6,7 @@
     <h4 class="media-heading">
       <%= link_to event.title, refinery.events_event_path(event) %>
     </h4>
-    <%= Date::DAYNAMES[event.date.wday] %>, <%= event.date.to_s(:long_ordinal) %>
+    <%= event.pretty_datetime %>
   </div>
   <br>
 </div>

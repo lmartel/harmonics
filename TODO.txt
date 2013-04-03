@@ -4,7 +4,7 @@ Priority:
     2. Contact
     3. Footer 
 (a cappella records)
-4. Albums
+    4. Albums
 5. Media
     6. News and/or Hero
 7. Press

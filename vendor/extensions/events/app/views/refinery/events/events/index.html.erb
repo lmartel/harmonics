@@ -7,7 +7,7 @@
   <% future.each do |event| %>
     <%= render :partial => "event_summary", :locals => { :event => event } %>
   <% end %>
-  (Interested in scheduling us for a performance? Please shoot us an email!)
+  (Interested in scheduling us for a performance? <a href="mailto:business@stanfordharmonics.com">Please shoot us an email!</a>)
   <h1>Past Gigs</h1>
   <% past.each do |event| %>
     <%= render :partial => "event_summary", :locals => { :event => event } %>
