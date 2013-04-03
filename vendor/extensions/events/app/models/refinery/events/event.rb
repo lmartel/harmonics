@@ -12,7 +12,7 @@ module Refinery
       belongs_to :photo, :class_name => '::Refinery::Image'
 
       def pretty_datetime
-        return "#{Date::DAYNAMES[date.wday]} #{date.in_time_zone('Pacific Time (US & Canada)').to_s(:long_ordinal)} PST"
+        return "#{Date::DAYNAMES[date.wday]} #{date.in_time_zone('Pacific Time (US & Canada)').to_s(:long_ordinal)}"
       end
     end
   end

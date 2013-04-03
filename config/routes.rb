@@ -3,6 +3,7 @@ Stanfordharmonics::Application.routes.draw do
   constraints subdomain: "stuff" do
     match '/' => redirect('/refinery/resources'), as: :stuff
   end
+  match '/stuff' => redirect('/refinery/resources'), as: :stuff
 
   constraints subdomain: "login" do
     match '/' => redirect('/refinery'), as: :login
