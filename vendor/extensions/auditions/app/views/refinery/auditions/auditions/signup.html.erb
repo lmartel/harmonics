@@ -1,6 +1,5 @@
-<%= raw @page.content_for(:body) %>
 <% content_for :body do %>
-	
+	<%= raw @page.content_for(:body) %>
   <%= simple_form_for([refinery, :auditions, @audition], :html => {:class => 'form-horizontal'})  do |f| %>
 		  <% if flash[:alert] %>
 		    <p class="error"><%= flash[:alert] %></p>

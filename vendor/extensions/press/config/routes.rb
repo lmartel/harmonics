@@ -2,7 +2,7 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   namespace :press do
-    resources :press, :path => '', :only => [:index] # :only => [:index, :show]
+    resources :press, :path => '', :only => [:index, :show] # :only => [:index, :show]
   end
 
   # Admin routes
