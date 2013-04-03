@@ -2,10 +2,11 @@ Time to start wrapping up.
 Priority:
     1. Calendar
     2. Contact
-    3. Footer (inc. a cappella records)
+    3. Footer 
+(a cappella records)
 4. Albums
 5. Media
-6. News and/or Hero
+    6. News and/or Hero
 7. Press
 * change zaxis of logo
 

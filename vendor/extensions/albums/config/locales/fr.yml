@@ -1,0 +1,32 @@
+fr:
+  refinery:
+    plugins:
+      albums:
+        title: Albums
+    albums:
+      admin:
+        albums:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Album
+            reorder: Réordonner les Albums
+            reorder_done: Fin de réordonnancement des Albums
+          records:
+            title: Albums
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Album. Cliquer sur "Créer un(e) nouve(au/l/lle) Album" pour créer votre premi(er/ère) album.'
+          album:
+            view_live_html: Voir ce(t/tte) album <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) album
+            delete: Supprimer définitivement ce(t/tte) album
+      albums:
+        show:
+          other: Autres Albums
+  activerecord:
+    attributes:
+      'refinery/albums/album':
+        title: Title
+        date: Date
+        photo: Photo
+        summary: Summary
+        description: Description
+        purchase_link: Purchase Link

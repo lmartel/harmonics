@@ -1,7 +1,8 @@
 Refinery::Core::Engine.routes.append do
 
   # Frontend routes
-  namespace :people, :path => 'band' do
+  # namespace :people, :path => 'band' do
+  namespace :people do
     resources :members, :only => [:index, :show]
   end
 

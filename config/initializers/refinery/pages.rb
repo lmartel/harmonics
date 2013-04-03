@@ -6,7 +6,7 @@ Refinery::Pages.configure do |config|
   # end
 
   # Configure global page default parts
-  # config.default_parts = ["Body", "Side Body"]
+  config.default_parts = ["Body"]
 
   # Configure whether to allow adding new page parts
   # TODO: once design is finished, disable this and enable

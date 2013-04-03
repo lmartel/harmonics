@@ -1,0 +1,33 @@
+es:
+  refinery:
+    plugins:
+      albums:
+        title: Albums
+#        article: masculino/femenino
+    albums:
+      admin:
+        albums:
+          actions:
+            create_new: Crear nuevo album
+            reorder: Reordenar albums
+            reorder_done: Reordenación de albums completada
+          records:
+            title: Albums
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay albums todavía. Pulsa en "Crear nuevo Album" para crear tu primer album.
+          album:
+            view_live_html: Ver este album como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este album
+            delete: Borrar este album para siempre
+      albums:
+        show:
+          other: Otros albums
+  activerecord:
+    attributes:
+      'refinery/albums/album':
+        title: Title
+        date: Date
+        photo: Photo
+        summary: Summary
+        description: Description
+        purchase_link: Purchase Link

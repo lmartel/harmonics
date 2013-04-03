@@ -1,0 +1,32 @@
+en:
+  refinery:
+    plugins:
+      albums:
+        title: Albums
+    albums:
+      admin:
+        albums:
+          actions:
+            create_new: Add New Album
+            reorder: Reorder Albums
+            reorder_done: Done Reordering Albums
+          records:
+            title: Albums
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Albums yet. Click "Add New Album" to add your first album.
+          album:
+            view_live_html: View this album live <br/><em>(opens in a new window)</em>
+            edit: Edit this album
+            delete: Remove this album forever
+      albums:
+        show:
+          other: Other Albums
+  activerecord:
+    attributes:
+      'refinery/albums/album':
+        title: Title
+        date: Date
+        photo: Photo
+        summary: Summary
+        description: Description
+        purchase_link: Purchase Link

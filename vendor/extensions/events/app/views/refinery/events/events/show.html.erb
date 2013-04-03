@@ -4,25 +4,14 @@
 
 <% content_for :body do %>
   <section>
-    <h1>Title</h1>
+    <h1><%=raw @event.date %></h1>
+  </section>
+  <section>
     <p>
-      <%=raw @event.title %>
+      <%= image_fu @event.photo, '500x500' %>
     </p>
   </section>
   <section>
-    <h1>Date</h1>
-    <p>
-      <%=raw @event.date %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @event.photo, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Blurb</h1>
     <p>
       <%=raw @event.blurb %>
     </p>
@@ -34,9 +23,11 @@
     <h2><%= t('.other') %></h2>
     <ul id="events">
       <% @events.each do |event| %>
-        <li>
-          <%= link_to event.title, refinery.events_event_path(event) %>
-        </li>
+        <% unless event == @event %>
+          <li>
+            <%= link_to event.title, refinery.events_event_path(event) %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </aside>

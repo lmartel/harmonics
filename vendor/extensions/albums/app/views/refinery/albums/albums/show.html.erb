@@ -1,0 +1,57 @@
+<% content_for :body_content_title do %>
+  <%= @album.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @album.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Date</h1>
+    <p>
+      <%=raw @album.date %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @album.photo, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Summary</h1>
+    <p>
+      <%=raw @album.summary %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @album.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Purchase Link</h1>
+    <p>
+      <%=raw @album.purchase_link %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="albums">
+      <% @albums.each do |album| %>
+        <li>
+          <%= link_to album.title, refinery.albums_album_path(album) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
