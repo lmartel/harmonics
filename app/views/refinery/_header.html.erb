@@ -2,10 +2,12 @@
   <%#= link_to Refinery::Core.site_name, refinery.root_path %>
   <%= image_tag("logo.png") %>
 </h1>
-<div class="hero-unit">
-  <% announcement = Refinery::Page.where(:slug => "announcement").first %>
-  <%= raw announcement.content_for(:body) if announcement %>
-</div>
+<% announcement = Refinery::Page.where(:slug => "announcement").first %>
+<% unless announcement.nil? or announcement.content_for(:body).empty? %>
+  <div class="hero-unit visible-desktop">
+    <%= raw announcement.content_for(:body) %>
+  </div>
+<% end %>
 <%= render(:partial => "/refinery/menu", :locals => {
              :dom_id => 'menu',
              :css => 'menu'

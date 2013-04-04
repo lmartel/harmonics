@@ -73,7 +73,7 @@ def add_body_content(slug, content)
   pp.save!
 end
 
-add_body_content("home", "<p>Welcome to our site. This is just a place holder page while we gather our content.</p><p>This is another block of content over here.&#160;Lorem ipsum HOMEPAGE sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>")
+add_body_content("home", "<p>Welcome to our site. This is just a place holder page while we gather our content. Lorem ipsum HOMEPAGE sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>")
 add_body_content("page-not-found", "<h1>Oops</h1><p>Clever 404 message here</p>")
 add_body_content("announcement", "<h1>Announcement</h1><p>Text goes here</p>")
 add_body_content("sidebar", "<h3>SIDEBAR HEADER</h3><p>Lorem ipsum SIDEBAR sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>")
@@ -83,8 +83,8 @@ add_body_content("members", "<p>Meet the band!</p><p>Lorem ipsum dolor sit amet,
 add_body_content("contact", "<p>Contact us like so, YO</p>")
 
 # Test data
-Refinery::People::Member.create(name: "Test Leo", year: 2015, photo_id: nil, voice: "Tenor", major: "Computer Science", hometown: "Berkleley, CA", bio: "<p>Test Leo is an ipsum who doesn't lorem of anything</p>")
-Refinery::People::Member.create(name: "Test Daria", year: 2016, photo_id: nil, voice: "Sop", major: "Computer Science", hometown: "Somewhere, OR", bio: "<p>Test Daria is an ipsum who doesn't lorem of anything</p>")
+Refinery::People::Member.create(name: "Test Leo", year: 2015, photo_id: nil, voice: "Tenor", major: "Computer Science", hometown: "Berkeley, CA", bio: "<p>Test Leo is an ipsum who doesn't lorem of anything</p>")
+Refinery::People::Member.create(name: "Test Daria", year: 2016, photo_id: nil, voice: "Sop", major: "Computer Science", hometown: "Tualatin, OR", bio: "<p>Test Daria is an ipsum who doesn't lorem of anything</p>")
 
 # Test data
 # Refinery::Events::Event.create(title: "EVONT IN FUTURE", date: "2018-01-01 00:00:00", photo_id: nil, blurb: "<p>waagh the future</p>")

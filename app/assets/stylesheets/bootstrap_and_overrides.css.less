@@ -40,17 +40,20 @@ body { padding-top: 60px; }
 
 //application-wide custom CSS begins here
 @textColor: @grayLight;
-@baseFontFamily: Arial, Verdana, sans;
+//@baseFontFamily: Arial, Verdana, sans;
+//@baseFontFamily: 'Exo', sans-serif;
+@baseFontFamily: Georgia, serif;
 
 body { 
 	background-image: url("wood.jpg");
+	//font-size: 20px;
+	//line-height: 31px;
 	font-size: 20px;
 	line-height: 31px;
-	font-family: 'Exo', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Georgia', serif;
+	font-family: 'Exo', sans-serif;
 }
 
 ul {
@@ -85,7 +88,7 @@ header#header{
 		top: -1px;
 		right: 0;
 		height: 85%;
-		//todo: fix top padding to work both with header and no header
+		//TODO: make padding and height responsive
 		padding: 0px 30px 10px;
 		width: auto;
 		max-width: 60%;
@@ -99,16 +102,15 @@ header#header{
 	}
 }
 
-.main .span-content {
-	margin: 0px 10px 10px !important;
+div.span-content {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+	width: auto;
 }
 
-#page {
-	background-image: url("maze.png"); 
-	border-radius: 15px;
-	div {
-		margin: 0px;
-	}
+div.main div.span-content {
+	margin-left: 25px !important;
+	margin-right: 50px !important;
 }
 
 #page, .hero-unit {
@@ -117,13 +119,22 @@ header#header{
 	border-color: @grayLight;
 }
 
+#page {
+	color: @grayDarker;
+	background-image: url("textured_paper.png"); 
+	border-radius: 15px;
+	border-color: @grayDarker;
+	div {
+		margin: 0px;
+	}
+}
+
 .sidebar {
-	font-size: 16px;
-	line-height: 23px;
+	font-size: 18px;
+	line-height: 32px;
 }
 
 .navbar {
-	//font-family: "Destroy Regular", "28 Days Later", Arial, Verdana, sans;
 
 	.brand {
 		padding-top: 0px;
