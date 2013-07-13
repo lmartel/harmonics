@@ -49,6 +49,7 @@ gem 'jquery-rails', '~> 2.0.0'
 
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.0'
+gem 'fog'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
